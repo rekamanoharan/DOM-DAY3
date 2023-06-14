@@ -2,51 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <p id="description">Calculator operations</p>
+    <h1 id="title" style="text-align: center;">Welcome to Calculate me!</h1>
     <div class="container">
-        <div class="calculator">
-            <input type="text" id="inputBox" placeholder="0" autocomplete=" off" readonly />
-            <div>
-                <button class="button operator">AC</button>
-                <button class="button operator">DEL</button>
-                <button class="button operator">%</button>
-                <button class="button operator">/</button>
-            </div>
-            <div>
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button operator">*</button>
-            </div>
-            <div>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button operator">-</button>
-            </div>
-            <div>
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button operator">+</button>
-            </div>
+        <div class="calc">
+            <input id="result" type="text" placeholder="0">
 
-            <div>
-                <button class="button">00</button>
-                <button class="button">0</button>
-                <button class="button">.</button>
-                <button class="button equalBtn">=</button>
-            </div>
+            <button onclick="clr()" id="clear">C</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="calculate('%')">%</button>
+            <button onclick="calculate('/')">/</button>
+            <button onclick="calculate(7)">7</button>
+            <button onclick="calculate(8)">8</button>
+            <button onclick="calculate(9)">9</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate(4)">4</button>
+            <button onclick="calculate(5)">5</button>
+            <button onclick="calculate(6)">6</button>
+            <button onclick="calculate('-')" id="subtract">-</button>
+            <button onclick="calculate(1)" id="1">1</button>
+            <button onclick="calculate(2)" id="2">2</button>
+            <button onclick="calculate(3)" id="3">3</button>
+            <button onclick="calculate('+')" id="add">+</button>
+            <button onclick="calculate('.')">.</button>
+            <button onclick="calculate(0)">0</button>
+            <button id="equal" onclick="Result()" class="equal">=</button>
+
         </div>
     </div>
-
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
     <script src="script.js"></script>
 </body>
 
